@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humidity & Temperature Monitor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1>Humidity & Temperature Monitor</h1>
+    <div class="status connecting" id="status">Connecting...</div>
+
+    <div class="cards">
+        <div class="card humidity-card">
+            <div class="card-icon">💧</div>
+            <div class="card-label">Humidity</div>
+            <div class="card-value" id="humidity">--</div>
+            <div class="card-unit">%</div>
+        </div>
+
+        <div class="card temp-card">
+            <div class="card-icon">🌡️</div>
+            <div class="card-label">Temperature</div>
+            <div class="card-value" id="temperature">--</div>
+            <div class="card-unit">°C</div>
+        </div>
+    </div>
+
+    <div class="history">
+        <h3>Recent Readings</h3>
+        <div id="historyList"></div>
+    </div>
+
+    <div class="last-update" id="lastUpdate">Waiting for data...</div>
+
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

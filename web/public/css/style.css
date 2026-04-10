@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Status Badge */
+.status {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.status.connected {
+    background: #00c853;
+    color: #000;
+}
+
+.status.disconnected {
+    background: #ff1744;
+    color: #fff;
+}
+
+.status.connecting {
+    background: #ffc107;
+    color: #000;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 40px 50px;
+    text-align: center;
+    min-width: 250px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.card-label {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.card-value {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.card-unit {
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+.humidity-card .card-value {
+    color: #42a5f5;
+}
+
+.temp-card .card-value {
+    color: #ff7043;
+}
+
+/* History */
+.history {
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 15px;
+    padding: 20px 30px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.history h3 {
+    margin-bottom: 10px;
+    color: #aaa;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+/* Last Update */
+.last-update {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        min-width: 200px;
+        padding: 30px 40px;
+    }
+
+    .card-value {
+        font-size: 2.5rem;
+    }
+}
